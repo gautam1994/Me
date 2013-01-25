@@ -1,0 +1,75 @@
+body {
+	background-image : url(nature.jpg); 
+	color : white; 
+}
+
+h1 {
+	margin : 10px 0px 0px 15px;
+	font-family: ubuntu;
+	font-weight : normal;
+	font-size : 35px;
+}
+
+#gog {
+	color : white;
+	position : fixed;
+	top : 20px;
+	left : 1070px;
+}
+
+#fb {
+	color:white;
+	position : fixed;
+	top : 20px;
+	left : 1140px;
+}
+
+#fbcon {
+	position : fixed;
+	left : 1170px;
+	top : 30px;
+}
+
+a:link {
+	color : white;
+	text-decoration : none;
+}
+a#gog:hover {
+	color : blue;
+	text-decoration : none;
+}
+a#fb:hover {
+	color : blue;
+	text-decoration : none;
+}
+a:visited {
+	color : black;
+	text-decoration : none;
+}
+
+.About {
+	margin : 50px 400px;
+	padding : 0px 20px;
+	color  : blue;
+	border : 2px ridge white;
+}
+
+.contact {
+	margin : 0px 800px 0px 50px;
+	padding : 0px 20px;
+	border : 2px ridge white;
+}
+
+img {
+margin : 20px 0px 0px 120px;
+opacity : 0;
+}
+
+img:hover {
+	opacity : 1;
+}
+
+#me {
+	position : fixed;
+	left : 550px;
+}
