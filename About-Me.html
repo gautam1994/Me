@@ -4,6 +4,7 @@
 		<title>About-Me</title>
 		 <link rel="stylesheet" type="text/css" href="Me.css" />
 		 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 	</head>
 	
 	<body>
@@ -47,6 +48,81 @@
 			</p>
 		</div>
 		
+		<div id = "bday">
+			<h1>
+				My Birthday in...
+			</h1>
+		</div>
+		<div class = "count"></div>
+		<div id = "count_text">
+			<h1><pre>MM  DD  Hr   Mn  Sec</pre></h3>
+		</div>
+
+		<script type="text/javascript">
+		
+		var today = new Date();
+		var month, day, hr, min, sec;
+
+		month = 9-today.getMonth();
+
+		function getday()
+		{
+			if(today.getDate()>2)
+			{
+				switch(today.getMonth()+1)
+				{
+					case 1:
+					case 3:
+					case 5:
+					case 7:
+					case 8:
+					case 10:
+					case 12:
+						day = 33-today.getDate();
+						break;
+					case 4:
+					case 6:
+					case 9:
+					case 11:
+						day = 32-today.getDate();
+					case 2:
+						day = 30-today.getDate();
+				}
+			}
+			else
+				day = 2-today.getDate();
+		}
+
+		function addzero()
+		{
+			if(month < 10)
+				month = "0" + month;
+			if(day < 10)
+				day = "0" + day;
+			if(hr < 10)
+				hr = "0" + hr;
+			if(min < 10)
+				min = "0" + min;
+			if(sec < 10)
+				sec = "0" + sec;
+		}
+
+		function count()
+		{
+			today = new Date();
+			month = 9-today.getMonth();
+			hr = 23-today.getHours();
+			min = 60-today.getMinutes();
+			sec = 60-today.getSeconds();
+			getday();
+			addzero();
+			$('.count').text(month + " : " + day + " : " + hr + " : " + min + " : " + sec).addcss("-webkit-transition-duration", "0.3s");
+		}
+
+		$(document).ready(setInterval(count, 1000));
+
+		</script>
+
 	</body>
 	
 </html>

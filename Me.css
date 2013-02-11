@@ -27,7 +27,7 @@ h1 {
 #fbcon {
 	position : fixed;
 	left : 1170px;
-	top : 30px;
+	top : 60px;
 }
 
 a:link {
@@ -63,13 +63,43 @@ a:visited {
 img {
 margin : 20px 0px 0px 120px;
 opacity : 0;
+-webkit-transition-duration:1s;
 }
 
 img:hover {
+	-webkit-transition-duration:1s;
 	opacity : 1;
 }
 
 #me {
 	position : fixed;
 	left : 550px;
+}
+
+.count {
+	font-size : 50px;
+	padding : 0px 0px;
+	margin : 0px 700px 0px 0px;
+	position : relative;
+	top : -60px;
+	left : 850px;
+	color : green;
+}
+
+#count_text {
+	position : relative;
+	top : -190px;
+	left : 840px;
+	color : rgb(139, 69, 19);
+}
+
+#bday {
+	position : relative;
+	top : -120px;
+	left : 920px;
+	color : blue;
+}
+
+#one {
+	color : blue;
 }
